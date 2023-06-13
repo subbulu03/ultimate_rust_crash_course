@@ -5,7 +5,7 @@ fn find_unique_number(numbers: &[i32]) -> Option<i32> {
 
     // Count the occurrences of each number
     for &num in numbers {
-        *count_map.entry(num).or_insert(0) += 1;
+        *count_map.entry(num).or_insert() + 1;
     }
 
     // Find the number with a count of 1
